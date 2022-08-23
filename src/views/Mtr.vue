@@ -62,9 +62,7 @@
             <img src="@/assets/img/Picjoin.png" alt />
             <article>
               <h2>Step 1</h2>
-              <p>
-                  Select <b>"Join"</b> to join<br />the meeting
-              </p>
+              <p>Select <b>"Join"</b> to join<br />the meeting</p>
             </article>
           </div>
         </Swiper>
@@ -75,7 +73,8 @@
             <article>
               <h2>Step 1</h2>
               <p>
-                Select <b>"Meet"</b> on ThinkSmart Controller home screen tocreate a new meeting
+                Select <b>"Meet"</b> on ThinkSmart Controller home screen
+                tocreate a new meeting
               </p>
             </article>
           </div>
@@ -84,7 +83,8 @@
             <article>
               <h2>Step 2</h2>
               <p>
-                Type a name to<br />search and Select the people you want to invite
+                Type a name to<br />search and Select the people you want to
+                invite
               </p>
             </article>
           </div>
@@ -106,15 +106,28 @@
             alt=""
           />
           <div>
-            <h3 v-html="activeBtn ? 'xxxxx xxxxx <br />xxxxx xxxxxx':'Sharing your Screen<br />with online attendees'"></h3>
-            <button class="btn1" :class="{activeBtn: activeBtn == 0, zoomIn: activeBtn == 0}" @click="activeBtn = 0">
+            <h3
+              v-html="
+                activeBtn
+                  ? 'xxxxx xxxxx <br />xxxxx xxxxxx'
+                  : 'Sharing your Screen<br />with online attendees'
+              "
+            ></h3>
+            <button
+              class="btn1"
+              :class="{ activeBtn: activeBtn == 0, zoomIn: activeBtn == 0 }"
+              @click="activeBtn = 0"
+            >
               <img
                 src="@/assets/img/Connecting_icon_MTRandZoom@2x.png"
                 alt=""
               />
               <p>Connecting</p>
             </button>
-            <button :class="{activeBtn: activeBtn == 1, zoomIn: activeBtn == 1}" @click="activeBtn = 1">
+            <button
+              :class="{ activeBtn: activeBtn == 1, zoomIn: activeBtn == 1 }"
+              @click="activeBtn = 1"
+            >
               <img src="@/assets/img/Sharing_icon_MTRandZoom@2x.png" alt="" />
               <p>Sharing</p>
             </button>
@@ -147,7 +160,7 @@
 </template>
 
 <script>
-import Screen from "../components/Screen.vue";
+import Screen from "../components/Screen/index.vue";
 import Tabs from "../components/Tabs";
 import Swiper from "../components/Swiper/index.vue";
 export default {
@@ -350,13 +363,13 @@ export default {
       article {
         margin-left: 0.26rem;
         margin-top: 0.65rem;
-        font-size: .22rem;
+        font-size: 0.22rem;
         h2 {
           margin-bottom: 0.16rem;
-          font-size: .24rem;
+          font-size: 0.24rem;
         }
         p {
-          margin-bottom: .2rem;
+          margin-bottom: 0.2rem;
         }
       }
       img {
